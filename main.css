@@ -5,7 +5,9 @@
 
 body{
   background-color: #000000;
-  font-size: 18px;
+  font-size: 20px;
+  font-family: 'Archivo Narrow', sans-serif;
+
 }
 
 div.container {
