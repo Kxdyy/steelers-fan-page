@@ -60,6 +60,15 @@ main {
     "map";
 }
 
+main.menu-page {
+  grid-template-areas:
+    "page-name"
+    "breakfast"
+    "lunch"
+    "dinner"
+    "sides";
+}
+
 footer {
   border: 3px solid #B61A16; /* disable this line once layout works */
   display: grid;
@@ -72,17 +81,6 @@ footer {
     "credits";
 }
 
-@media (max-width:599px) {
-  main.menu-page {
-    grid-template-columns: 1fr;
-    grid-template-areas:
-    "page-name"
-    "breakfast"
-    "lunch"
-    "dinner"
-    "sides";
-  }
-}
 
 /* tablets and small laptops */
 @media (min-width: 600px) {
@@ -123,8 +121,7 @@ footer {
 }
 
   div#page-name {
-    grid-column: span 2;
-
+    grid-area: page-name;
   }
 
 /* desktops */
@@ -280,6 +277,13 @@ ul {
 li {
 
 }
+
+span.price {
+     font-family: 'Rufina', serif;
+
+}
+
+
 
 /* tables */
 
