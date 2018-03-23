@@ -1,0 +1,353 @@
+/* Color Palette
+  White: #ffffff;
+  Black: #000000;
+  Medium Gray: #999999;
+  Light Gray: #dddddd;
+  Light blue: #99ffff;
+*/
+
+@font-face {
+  font-family: "Buffalo";
+  src: url("../fonts/BuffaloInline2Grunge.ttf");
+}
+
+@font-face {
+  font-family: "Sable";
+  src: url("../fonts/sable.ttf");
+}
+
+/*********** Begin Layout Styles ***********/
+body{
+  background-image: url("../img/aleathia-browns-color-n-time1.png");
+}
+
+div.container {
+  background-color: #ffffff;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 1200px; /* disable this line if you want full-width layouts */
+  padding: 5px 0;
+}
+
+header, main, footer {
+  padding: 15px;
+  margin: 15px;
+}
+
+/* phones (base layout is mobile-first) */
+header {
+  align-items: center;
+  border: 3px solid #293E96; /* disable this line once layout works */
+  display: grid;
+  grid-column-gap: 15px;
+  grid-row-gap: 15px;
+  grid-template-columns: 1fr;
+  grid-template-areas:
+    "restaurant_name"
+    "logo";
+}
+
+main {
+  border: 3px solid #1D7653; /* disable this line once layout works */
+  display: grid;
+  grid-column-gap: 15px;
+  grid-row-gap: 15px;
+  grid-template-columns: 1fr;
+  grid-template-areas:
+    "carousel"
+    "menu"
+    "hours"
+    "map";
+}
+
+footer {
+  border: 3px solid #B61A16; /* disable this line once layout works */
+  display: grid;
+  grid-column-gap: 15px;
+  grid-row-gap: 15px;
+  grid-template-columns: 1fr;
+  grid-template-areas:
+    "media"
+    "contact"
+    "credits";
+}
+
+@media (max-width:599px) {
+  main.menu-page {
+    grid-template-columns: 1fr;
+    grid-template-areas:
+    "page-name"
+    "breakfast"
+    "lunch"
+    "dinner"
+    "sides";
+  }
+}
+
+/* tablets and small laptops */
+@media (min-width: 600px) {
+
+  header {
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas:
+      "restaurant_name logo";
+  }
+
+  main {
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-areas:
+      "carousel carousel carousel"
+      "map menu hours"
+  }
+
+
+  main.menu-page {
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas:
+      "page-name page-name"
+      "breakfast lunch"
+      "dinner sides";
+  }
+
+  footer {
+    grid-template-columns: 1fr;
+    grid-template-areas:
+    "contact"
+    "credits"
+
+  }
+
+  div#media {
+    display: none;
+  }
+}
+
+  div#page-name {
+    grid-column: span 2;
+
+  }
+
+/* desktops */
+@media (min-width: 900px) {
+  header {
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas:
+      "restaurant_name logo";
+  }
+
+  main {
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-areas:
+      "carousel carousel carousel"
+      "hours menu map"
+  }
+
+  main.menu-page {
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas:
+    "page-name page-name"
+    "breakfast lunch"
+    "dinner sides";
+  }
+
+  footer {
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas:
+      "contact credits "
+
+  }
+}
+
+@media (max-width: 599px) {
+  .logo {
+    width: 60%;
+  }
+}
+div {
+  /* border: 1px solid #999999; /* disable this line once layout works */
+  text-align: center; /* disable this line once layout works */
+}
+
+main div {
+  /*   min-height: 80px; /* disable this line once layout works */
+}
+
+div#restaurant_name {
+  grid-area: restaurant_name;
+}
+
+div#logo {
+  grid-area: logo;
+}
+
+div#carousel {
+  grid-area: carousel;
+  overflow: hidden;
+}
+
+div#hours {
+  grid-area: hours;
+}
+
+div#menu {
+  grid-area: menu;
+}
+
+div#map {
+  grid-area: map;
+}
+
+div#contact {
+  grid-area: contact;
+}
+
+div#media {
+  grid-area: media;
+}
+
+div#credits {
+  grid-area: credits;
+}
+
+/*********** End Layout Styles ***********/
+
+
+/*********** Begin Content Styles ***********/
+
+/* Headings */
+h1 {
+  font-family: "Buffalo";
+  font-size: 60px;
+  margin: 0;
+  color: #FF6600;
+}
+
+@media (min-width: 600px) {
+    h1 {
+      font-size: 120px;
+    }
+}
+
+@media (min-width: 100px) {
+    h2 {
+      font-size: 30px;
+    }
+}
+
+
+h2 {
+  font-family: sans-serif;
+  font-size: 35px;
+  color: #293E96;
+  font-family: 'Cinzel', serif;
+}
+
+h3 {
+  font-size: 25px;
+}
+
+h4 {
+
+}
+
+h5 {
+
+}
+
+h6 {
+
+}
+
+/* Paragraphs and lists */
+
+p {
+  font-size: 20px;
+  font-family: 'Rufina', serif;
+}
+
+ol {
+
+}
+
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  font-size: 20px;
+  font-family: 'Rufina', serif;
+}
+
+li {
+
+}
+
+/* tables */
+
+table {
+  border-collapse: collapse;
+  border: 1px solid black;
+  width: 100%;
+}
+
+caption {
+
+}
+
+tr {
+  border: 1px solid #aaaaaa;
+  margin-top: 7px;
+  margin-bottom: 7px;
+
+}
+
+th {
+  border: 1px solid black;
+  font-size: 20px;
+  font-family: 'Rufina', serif;
+
+}
+
+td {
+  border: 1px solid black;
+  font-size: 20px;
+  font-family: 'Rufina', serif;
+}
+
+/* images */
+img {
+  max-width: 100%;
+}
+
+img.social {
+
+  max-width: 100%;
+
+}
+
+
+iframe {
+  max-width: 100%;
+}
+/* links */
+
+a:link {
+
+}
+
+a:visited {
+
+}
+
+a:hover {
+
+}
+
+a:active {
+
+}
+
+/* forms */
+
+
+
+/*********** End Content Styles ***********/
